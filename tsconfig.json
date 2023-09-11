@@ -1,0 +1,29 @@
+{
+  "include": ["src/**/*.ts", "env.d.ts"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "module": "node16",
+    "target": "esnext",
+    "moduleResolution": "node16",
+    "moduleDetection": "force",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "composite": true,
+    "strict": true,
+    "downlevelIteration": true,
+    "skipLibCheck": true,
+    "jsx": "preserve",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declaration": true,
+    "allowJs": true,
+    "baseUrl": "src",
+    "outDir": "app",
+    "types": [
+      "bun-types" // add Bun global
+    ]
+  }
+}

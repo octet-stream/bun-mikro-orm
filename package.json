@@ -1,0 +1,29 @@
+{
+  "name": "bun-mikro-orm",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun run src/index.ts"
+  },
+  "mikro-orm": {
+    "configPaths": [
+      "./src/lib/db/config.ts"
+    ]
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "ts-node": "^10.9.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@mikro-orm/better-sqlite": "^5.8.0",
+    "@mikro-orm/cli": "^5.8.0",
+    "@mikro-orm/core": "^5.8.0",
+    "@mikro-orm/mysql": "^5.8.0",
+    "@mikro-orm/reflection": "^5.8.0",
+    "mysql2": "^3.6.1",
+    "reflect-metadata": "^0.1.13"
+  }
+}
