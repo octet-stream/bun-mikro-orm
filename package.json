@@ -1,5 +1,6 @@
 {
   "name": "bun-mikro-orm",
+  "description": "A minimal demonstration project with Bun and MikroORM",
   "module": "src/index.ts",
   "type": "module",
   "scripts": {
