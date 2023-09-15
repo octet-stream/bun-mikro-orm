@@ -7,8 +7,9 @@
     "start": "bun run ."
   },
   "mikro-orm": {
+    "useTsNode": true,
     "configPaths": [
-      "./src/lib/db/config.ts"
+      "./src/lib/db/cli.ts"
     ]
   },
   "devDependencies": {
