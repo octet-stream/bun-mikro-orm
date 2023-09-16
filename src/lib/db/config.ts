@@ -1,6 +1,6 @@
-import {defineConfig} from "@mikro-orm/mysql"
+import {resolve} from "node:path"
 
-import * as entities from "../../db/entities.ts"
+import {defineConfig} from "@mikro-orm/mysql"
 
 export const config = defineConfig({
   dbName: process.env.MIKRO_ORM_DBNAME,
@@ -8,5 +8,5 @@ export const config = defineConfig({
   port: parseInt(process.env.MIKRO_ORM_PORT || "", 10) || undefined,
   user: process.env.MIKRO_ORM_USER,
   password: process.env.MIKRO_ORM_PASSWORD,
-  entities: Object.values(entities)
+  entities: Array.of(resolve("src", "db", "entities", "**", "*.ts"))
 })
