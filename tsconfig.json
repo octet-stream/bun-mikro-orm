@@ -2,7 +2,7 @@
   "include": ["src/**/*.ts", "env.d.ts"],
   "exclude": ["node_modules"],
   "compilerOptions": {
-    "lib": ["ESNext"],
+    "lib": ["esnext"],
     "module": "node16",
     "target": "esnext",
     "moduleResolution": "node16",

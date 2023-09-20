@@ -4,7 +4,8 @@
   "main": "src/index.ts",
   "type": "module",
   "scripts": {
-    "start": "bun run ."
+    "start": "bun run .",
+    "build": "bun build ./src/index.ts --target=bun --outdir=app --external @mikro-orm/core --external @mikro-orm/mysql --external mysql2"
   },
   "mikro-orm": {
     "useTsNode": true,
