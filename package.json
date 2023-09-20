@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "bun run .",
-    "build": "bun build ./src/index.ts --target=bun --outdir=app --external @mikro-orm/core --external @mikro-orm/mysql --external mysql2"
+    "build": "bun build ./src/index.ts --target=bun --outdir=app --external @mikro-orm/core --external @mikro-orm/mysql --external mysql2 --external reflect-metadata"
   },
   "mikro-orm": {
     "useTsNode": true,
