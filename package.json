@@ -8,25 +8,24 @@
     "build": "bun build ./src/index.ts --target=bun --outdir=app --external @mikro-orm/core --external @mikro-orm/mysql --external mysql2 --external reflect-metadata"
   },
   "mikro-orm": {
-    "useTsNode": true,
+    "alwaysAllowTs": true,
     "configPaths": [
       "./src/lib/db/cli.ts"
     ]
   },
   "devDependencies": {
-    "bun-types": "latest",
-    "ts-node": "^10.9.1"
+    "bun-types": "latest"
   },
   "peerDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "5.0.0"
   },
   "dependencies": {
-    "@mikro-orm/better-sqlite": "^5.8.0",
-    "@mikro-orm/cli": "^5.8.0",
-    "@mikro-orm/core": "^5.8.0",
-    "@mikro-orm/mysql": "^5.8.0",
-    "@mikro-orm/reflection": "^5.8.0",
-    "mysql2": "^3.6.1",
-    "reflect-metadata": "^0.1.13"
+    "@mikro-orm/better-sqlite": "5.8.2",
+    "@mikro-orm/cli": "5.8.2",
+    "@mikro-orm/core": "5.8.2",
+    "@mikro-orm/mysql": "5.8.2",
+    "@mikro-orm/reflection": "5.8.2",
+    "mysql2": "3.6.1",
+    "reflect-metadata": "0.1.13"
   }
 }
