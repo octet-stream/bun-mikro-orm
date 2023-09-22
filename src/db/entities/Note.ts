@@ -6,12 +6,12 @@ import {Record} from "./Record.ts"
 export class Note extends Record {
   [OptionalProps]?: "createdAt" | "updatedAt" | "completed"
 
-  @Property({type: "varchar"})
+  @Property()
   title!: string
 
-  @Property({type: "text", nullable: true, default: null})
+  @Property({nullable: true, default: null})
   details!: string | null
 
-  @Property({type: "boolean", default: false})
-  completed = false
+  @Property({default: false})
+  completed: boolean = false
 }
