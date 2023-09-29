@@ -1,12 +1,6 @@
-import {orm} from "./lib/db/orm.ts"
+import type {Note} from "./entities/Note.js"
 
-import {Note} from "./db/entities.ts"
-
-const generator = orm.getSchemaGenerator()
-
-await generator.refreshDatabase()
-
-const input = [
+export const data = [
   {
     title: "Test note #1",
     details: "I am a test note",
@@ -23,13 +17,3 @@ const input = [
     completed: false
   }
 ] satisfies Omit<Note, "id" | "createdAt" | "updatedAt">[]
-
-const em = orm.em.fork()
-
-const notes = input.map(note => em.create(Note, note))
-
-await em.persistAndFlush(notes)
-
-console.log(notes)
-
-await orm.close()

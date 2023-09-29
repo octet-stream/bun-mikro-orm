@@ -1,0 +1,9 @@
+{
+  "name": "@bun-mikro-orm/common",
+  "type": "module",
+  "main": "./index.ts",
+  "dependencies": {
+    "@mikro-orm/core": "5.8.4",
+    "reflect-metadata": "0.1.13"
+  }
+}

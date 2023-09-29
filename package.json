@@ -1,31 +1,16 @@
 {
   "name": "bun-mikro-orm",
   "description": "A minimal demonstration project with Bun and MikroORM",
-  "main": "src/index.ts",
-  "type": "module",
-  "scripts": {
-    "start": "bun run .",
-    "build": "bun build ./src/index.ts --target=bun --outdir=app --external @mikro-orm/core --external @mikro-orm/mysql --external mysql2 --external reflect-metadata"
-  },
-  "mikro-orm": {
-    "alwaysAllowTs": true,
-    "configPaths": [
-      "./src/lib/db/cli.ts"
-    ]
-  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
-    "bun-types": "latest"
+    "@types/node": "20.7.1",
+    "bun-types": "latest",
+    "typescript": "5.2.2"
   },
   "peerDependencies": {
-    "typescript": "5.0.0"
-  },
-  "dependencies": {
-    "@mikro-orm/better-sqlite": "5.8.2",
-    "@mikro-orm/cli": "5.8.2",
-    "@mikro-orm/core": "5.8.2",
-    "@mikro-orm/mysql": "5.8.2",
-    "@mikro-orm/reflection": "5.8.2",
-    "mysql2": "3.6.1",
-    "reflect-metadata": "0.1.13"
+    "typescript": "5.2.2"
   }
 }
